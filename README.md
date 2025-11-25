@@ -37,7 +37,7 @@
     <div class="background"></div>
     <div class="container">
         <div class="card">
-       <h1 style="text-align:center;text-decorating: none; color: white; padding: 0 70px;">TRẦN LÊ QUỲNH NHƯ</h1>
+       <h1 style="text-align:center;text-decorating: none; color: white; padding: 0 80px;">TRẦN LÊ QUỲNH NHƯ</h1>
        <p style="text-align:center;text-decorating: none; color: white; padding: 0 10px;">🔰 Acc chính chủ 🔰</p>
        <p style="text-align:center;text-decorating: none; color: white; padding: 0 10px;">🍚👕🌾💵</p>
        <p style="text-align:center;text-decorating: none; color: white; padding: 0 10px;">Mê xe độ👍🏻</p>
