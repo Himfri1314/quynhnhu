@@ -38,9 +38,9 @@
     <div class="container">
         <div class="card">
           <h1 style="font-size:30px; color:black;
-           text-shadow: 0 0 10px #00aaff,
-                        0 0 20px #00aaff,
-                        0 0 30px #00aaff;
+           text-shadow: 0 0 10px ##000000,
+                        0 0 20px ##000000,
+                        0 0 30px ##000000;
             text-align:center;
             text-decorating: none;
             color: white;">
