@@ -37,9 +37,10 @@
     <div class="background"></div>
     <div class="container">
         <div class="card">
-          <h1 style="font-size:40px; 
-           text-shadow: 2px 2px 0 #000,
-                        4px 4px 0 #666;
+          <h1 style="font-size:30px; color:black;
+           text-shadow: 0 0 10px #00aaff,
+                        0 0 20px #00aaff,
+                        0 0 30px #00aaff;
             text-align:center;
             text-decorating: none;
             color: white;">
