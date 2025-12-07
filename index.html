@@ -1,15 +1,137 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layla UI</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhuongDuyen</title>
+  <style>
+    /* ===== GLOBAL ===== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f6f7fb;
+      color: #243B9A; /* Màu chữ mặc định */
+    }
+    a { text-decoration: none; }
+    /* 🌈 NỀN TOÀN TRANG */
+    .background {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image: url("PD.png");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      z-index: -1;
+    }
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      color: #222;
+    }
+    nav a {
+      margin: 0 20px;
+      font-size: 18px;
+      color: #222;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #243B9A; }
+    /* BANNER */
+    .banner {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 30px;
+      color: #333;
+      background-image: url("Xanhh.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+}
+    .banner-left { width: 45%; }
+    .banner-left h1 { font-size: 60px; color: #243B9A; }
+    .banner-left p { font-size: 20px; color: #555; margin-top: 15px; }
+    .readmore { font-size: 18px; font-weight: bold; color: #243B9A; margin-top: 20px; display: inline-block; }
+
+    .banner-right img { width: 400px; }
+    /* CONTENT GRID */
+    .content {
+      width: 90%;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 40px;
+    }
+    /* ARTWORK */
+    .art-list { display: flex; gap: 20px; }
+    .art-card img {
+      width: 100px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    .viewmore {
+      margin-top: 10px;
+      padding: 12px 30px;
+      border-radius: 25px;
+      border: none;
+      background: #fff;
+      color: #7281A0;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .viewmore:hover { background: #7281A0; color: #fff; }
+    /* INFORMATION BOXES */
+    .search-item {
+      padding: 12px 20px;
+      margin-top: 10px;
+      background: #7281A0;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      color: #222;
+    }
+    .search-item.black { color: #ffff; }
+    .icon-search { width: 18px; margin-right: 10px; stroke: #222; }
+    /* INFO CARDS */
+    .container { display: flex; gap: 20px; padding: 20px; }
+    .left-panel { display: flex; flex-direction: column; gap: 15px; }
+    .right-panel { display: flex; flex-direction: column; gap: 15px; }
+
+    .character-card { position: relative; width: 150px; height: 150px; border-radius: 12px; overflow: hidden; }
+    .character-img { width: 100%; height: 100%; object-fit: contain; }
+    .close-btn {
+      position: absolute; top: 8px; left: 8px;
+      background-color: rgba(255,255,255,0.55);
+      border: none; border-radius: 50%;
+      width: 25px; height: 25px;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex; justify-content: center; align-items: center;
+      font-weight: bold; color: #333;
+    }
+    .info-card {
+      width: 260px;
+      padding: 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .card-title { margin: 0; font-size: 18px; font-weight: 600; color: inherit; }
+    .card-description { margin-top: 5px; font-size: 14px; line-height: 1.4; color: inherit; opacity: 0.85; }
+  </style>
 </head>
 <body>
-    <!-- Nền phía sau toàn trang -->
-    <div class="background"></div>
-    <header>
-        <style>
+  <div class="background"></div>
+  <!-- HEADER -->
+  <header>
+    <style>
   .avatar {
       width: 120px;
       height: 120px;
@@ -28,77 +150,19 @@
     width: 250px;
   }
 </style>
-<div class="card">
-        <img src="duyen.png" class="avatar">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Search</a>
-            <a href="#">Message</a>
-        </nav>
-        <div class="buttons">
-            <button class="login">Log in</button>
-            <button class="signup">Sign up</button>
+    <div class="card avatar-box">
+      <img src="duyen.png" class="avatar" alt="Avatar">
+    </div>
+    <nav>
+      <a href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">Home</a>
+      <a href="https://www.facebook.com/phuong.duyen.962504/">Facebook</a>
+      <a href="https://www.facebook.com/messages">Messages</a>
+    </nav>
+    <div class="buttons">
+            <button class="login">Nhóm 1</button>
+            <button class="signup">Lớp 12 Văn</button>
         </div>
-    </header>
-    <!-- Banner -->
-    <section class="banner">
-        <div class="banner-left">
-            <h1>NGUYỄN NGỌC PHƯƠNG DUYÊN</h1>
-            <p>Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng</p>
-            <a class="readmore" href="#">Read More</a>
-        </div>
-        <div class="banner-right">
-            <img src="lung linh.png" alt="">
-        </div>
-    </section>
-    <!-- Artwork + Recent -->
-    <section class="content">
-        <div class="artwork">
-            <h2>Artwork ></h2>
-            <div class="art-list">
-                <div class="art-card"><img src="art1.png"></div>
-                <div class="art-card"><img src="art2.png"></div>
-            </div>
-            <button class="viewmore">View More</button>
-        </div>
-        <div class="recent">
-            <h2>Recent Search</h2>
-            <div class="search-item">Layla ascension material</div>
-            <div class="search-item">Layla build</div>
-            <div class="search-item">Kalpalata lotus locations</div>
-            <div class="search-item">Layla cosplay</div>
-            <div class="search-item">Layla Wallpaper</div>
-        </div>
-        <div class="info">
-            <div class="info-card">
-                <h3>Cryo character</h3>
-                <p>Cryo is one of the seven Elements…</p>
-            </div>
-            <div class="info-card">
-                <h3>Sumeru</h3>
-                <p>Sumeru is one of the seven regions…</p>
-            </div>
-            <div class="info-card">
-                <h3>Akademiya</h3>
-                <p>The Sumeru Akademiya is Sumeru’s main governing body…</p>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
-<style>
-    /* ✨ NỀN PHÍA SAU (background image) */
-.background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: url("pd.png"); /* → CHÈN HÌNH NỀN Ở ĐÂY */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: -1;
-}
-/* font + căn tổng thể */
+    <style>
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -124,82 +188,283 @@ nav a {
     font-size: 16px;
     cursor: pointer;
 }
-.login { background: #e7e7e7; }
-.signup { background: #6e62d4; color: white; }
-/* Banner */
-.banner {
-    margin: 40px auto;
+.login { background: #ffff; color: blue black; }
+.signup { background: #7281A0; color: white; }
+      </style>
+  </header>
+  <!-- BANNER -->
+  <section class="banner">
+    <div class="banner-left">
+      <h1>NGUYỄN NGỌC PHƯƠNG DUYÊN</h1>
+      <p>"Tôi không lười, chỉ là rất giỏi trong việc tiết kiệm năng lượng"</p>
+      <a class="readmore" href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">◄ Quay lại trang chủ</a>
+    </div>
+    <div class="banner-right">
+      <img src="lung linh.png" alt="">
+    </div>
+  </section>
+  <!-- CONTENT -->
+  <section class="content">
+    <!-- ARTWORK -->
+    <div class="artwork">
+      <h2>ARTWORK</h2>
+      <div class="art-list">
+        <div class="art-card"><img src="art1.jpg" alt="Art 1"></div>
+        <div class="art-card"><img src="art2.jpg" alt="Art 2"></div>
+      </div>
+      <button class="viewmore">View More</button>
+    </div>
+       <!-- INFORMATION -->
+    <div class="recent">
+        <h2>INFORMATION</h2>
+        <div class="search-item">
+            <svg class="icon-search" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="2"/>
+            </svg>
+          <a style="text-decorating: none; color: white; padding: 0 10px;"> Ngày sinh: 04/12/2008</a>
+        </div>
+        <div class="search-item">
+            <svg class="icon-search" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="2"/>
+            </svg>
+          <a style="text-decorating: none; color: white; padding: 0 10px;"> Cung hoàng đạo: Nhân Mã</a>
+        </div>
+        <div class="search-item">
+            <svg class="icon-search" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="2"/>
+            </svg>
+          <a style="text-decorating: none; color: white; padding: 0 10px;"> Email: duyen041208@gmail.com</a>
+        </div>
+        <div class="search-item black">
+            <svg class="icon-search" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2"/>
+                <line x1="16" y1="16" x2="22" y2="22" stroke="white" stroke-width="2"/>
+            </svg>
+          <a style="text-decorating: none; color: white; padding: 0 10px;">  SĐT: 0972591449</a>
+        </div>
+      <!-- INFO CARDS -->
+      <div class="container">
+        <div class="left-panel">
+          <div class="character-card">
+            <button class="close-btn">X</button>
+            <img src="fri1.jpg" alt="Nhân vật 1" class="character-img">
+          </div>
+          <div class="character-card">
+            <button class="close-btn">X</button>
+            <img src="fri2.jpg" alt="Nhân vật 2" class="character-img">
+          </div>
+        </div>
+       <div class="right-panel">
+            <div class="info-card cryo">
+                <div class="icon-text-group">
+                    <h2 class="card-title">SỞ THÍCH</h2>
+                </div>
+                <p class="card-description">Vẽ vời - “Art is the lie that enables us to realize the truth.”</span></p>
+            </div>
+            <div class="info-card sumeru">
+                <div class="icon-text-group">
+                    <h2 class="card-title">NHẠC</h2>
+                </div>
+                <p class="card-description">Nắng Ấm Trong Tim - Duongg<br>
+            "Lạc vào khu rừng hoa, khu rừng ngập mùi hương người ta"</span></p>
+            </div>
+            <div class="info-card akademiya">
+                <div class="icon-text-group">
+                    <h2 class="card-title">TÍNH CÁCH</h2>
+                </div>
+                <p class="card-description">Năng động, sáng tạo, lạc quan</span></p>
+            </div>
+        </div>
+    </div>
+    <style>
+.container {
     width: 90%;
-    background: white;
-    border-radius: 30px;
-    padding: 30px;
+    max-width: 800px;
+}
+/* --- Phần Đầu: INFORMATION  --- */
+.info-header h1 {
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 20px;
+}
+.input-field {
+    /* Đổi màu nền, bỏ đổ bóng để giống ô input  */
+    background-color: rgba(255, 255, 255, 0.5); /* Màu trắng mờ */
+    border-radius: 8px; /* Bo tròn ít hơn */
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 16px;
+    box-shadow: none; /* Bỏ đổ bóng */
     display: flex;
+    align-items: center;
+}
+.icon-q {
+    margin-right: 10px;
+    color: #6a6a6a; /* Màu icon tìm kiếm */
+    font-size: 14px;
+}
+/* --- Phần Thẻ Nội Dung --- */
+.cards-section {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    margin-top: 30px;
+}
+.info-card.style-2 {
+    display: flex;
+    align-items: center;
+    /* Toàn bộ thẻ có nền trắng và bo tròn */
+    background-color: white; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ hơn */
+    padding: 10px;
+    /* Dùng Flexbox để căn chỉnh nội dung và icon */
     justify-content: space-between;
-    overflow: hidden;
 }
-.banner-left {
-    width: 45%;
+/* Phần nội dung bên phải (Màu chữ và tiêu đề) */
+.card-content.style-2 {
+    flex-grow: 1;
+    padding: 5px 0;
 }
-.banner-left h1 {
-    font-size: 60px;
-    margin: 0;
-    color: #222;
+.card-content.style-2 h3 {
+    margin: 0 0 3px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Màu tiêu đề đen */
+    border-bottom: none; /* Bỏ gạch chân */
+    padding-bottom: 0;
 }
-.banner-left p {
-    font-size: 20px;
-    margin-top: 15px;
+.card-content.style-2 p {
+    margin: 3px 0 0 0;
+    font-size: 13px;
     color: #555;
 }
-.readmore {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #444;
-    font-weight: bold;
+.card-content.style-2 .quote {
+    font-style: italic;
+    font-size: 12px;
+    color: #777;
 }
-.banner-right img {
-    width: 350px;
+/* Nút X (Đóng) - Dấu X trên các thẻ chibi ở Hình 1 đã bị loại bỏ trong style này */
+.close-button {
+    display: none; 
 }
-/* Content layout */
-.content {
-    width: 90%;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 40px;
-}
-/* Artwork */
-.art-list {
-    display: flex;
-    gap: 20px;
-}
-.art-card img {
-    width: 140px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.viewmore {
-    margin-top: 10px;
-    padding: 12px 30px;
-    border-radius: 25px;
-    border: none;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-/* Recent Search */
-.search-item {
-    padding: 12px 20px;
-    margin-top: 10px;
-    background: #e8effa;
-    border-radius: 15px;
-}
-/* Info cards */
-.info-card {
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
+      <style>
+        /* ======================================= */
+        /* GLOBAL & HEADER             */
+        /* ======================================= */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f6f7fb; /* Màu nền nhẹ nhàng */
+            color: #243B9A;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+        }
+        nav a { margin: 0 15px; text-decoration: none; color: #222; }
+        /* ======================================= */
+        /* BANNER                   */
+        /* ======================================= */
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1400px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        /* ======================================= */
+        /* BỐ CỤC 3 CỘT CHÍNH (CONTENT)     */
+        /* ======================================= */
+        .content-grid {
+            width: 90%;
+            max-width: 1400px; /* Chiều rộng tối đa của nội dung */
+            margin: 40px auto;
+            padding: 20px 0;
+            display: grid;
+            /* CỘT 1 (ARTWORK) | CỘT 2 (INFO) | CỘT 3 (CARDS) */
+            grid-template-columns: 1fr 1.5fr 1.5fr; 
+            gap: 40px; /* Khoảng cách giữa các cột */
+        }
+        /* --- ĐỊNH VỊ CÁC KHỐI LỚN --- */
+        .artwork-section { grid-column: 1; }
+        .information-section { grid-column: 2; }
+        .cards-column { grid-column: 3; }
+        .info-header h1, .artwork-section h2 {
+            font-size: 28px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        /* --- TIÊU ĐỀ GIẢ ĐỂ CĂN CHỈNH NGANG HÀNG --- */
+        .cards-column .info-header.placeholder {
+            visibility: hidden; /* Ẩn chữ nhưng giữ không gian */
+            height: 20px; /* Điều chỉnh chiều cao cho phù hợp với h1 */
+            margin-bottom: 20px; 
+            padding: 0;
+        }
+        /* --- CỘT 1: ARTWORK --- */
+        .art-list { display: flex; gap: 10px; }
+        .art-card img { width: 250px; height: 450px; object-fit: cover; border-radius: 10px; }
+        .viewmore { margin-top: 10px; padding: 8px 20px; border-radius: 20px; border: none; }
+        /* --- CỘT 2: INFORMATION (INPUT FIELDS) --- */
+        .input-fields-group { 
+            margin-top: 0; 
+            display: flex;
+            flex-direction: column; 
+            gap: 15px; 
+        }
+        .input-field {
+            padding: 12px 20px;
+            background: #7281A0;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            color: #FFFF;
+        }
+        .icon-q { color: #FFFF; font-size: 14px; margin-right: 10px; }
+        /* --- CỘT 3: INFO CARDS (SỞ THÍCH, NHẠC) --- */
+        .cards-section {
+            margin-top: 0; 
+            width: 100%;
+            display: flex;
+            flex-direction: column; 
+            gap: 15px; 
+        }
+        .info-card {
+            padding: 15px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            color: #333;
+            position: relative;
+            padding-left: 10px; /* Khoảng trống cho ảnh chibi */
+        }
+        .chibi-image {
+            position: absolute;
+            left: -5px; 
+            top: 50%;
+            transform: translateY(-50%);
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+        .info-card.no-chibi {
+            padding-left: 15px; /* Không cần ảnh */
+            background: white;
+        }
+        .card-title { font-size: 18px; color: #243B9A; margin-bottom: 5px; }
+        .card-description { font-size: 14px; color: #555; }
+    </style>
+  </section>
+</body>
+</html>
